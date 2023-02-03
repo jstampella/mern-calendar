@@ -10,7 +10,7 @@ console.log("/////////////////");
 console.log(process.env.DB_CNN);
 
 //Base de datos
-//dbConnection();
+dbConnection();
 
 //cors
 app.use(cors());
