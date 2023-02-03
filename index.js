@@ -5,6 +5,10 @@ const { dbConnection } = require("./database/config");
 
 const app = express();
 
+console.log(process.env.PORT);
+console.log("/////////////////");
+console.log(process.env.DB_CNN);
+
 //Base de datos
 dbConnection();
 
