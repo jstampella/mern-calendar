@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
+const path = require("path");
 const { dbConnection } = require("./database/config");
 
 const app = express();
@@ -16,7 +17,7 @@ dbConnection();
 app.use(cors());
 
 // Directorio publico
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")));
 
 //Lectura y parseo de body
 app.use(express.json());
